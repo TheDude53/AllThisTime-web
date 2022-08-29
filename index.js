@@ -40,3 +40,9 @@ function loadSegment(segmentNumber) {
   script.src = "./segments/seg" + segmentNumber + ".js";
   document.body.appendChild(script);
 };
+
+const playData = {
+  music: true
+};
+
+loadSegment("-menu");
