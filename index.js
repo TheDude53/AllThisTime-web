@@ -25,8 +25,8 @@ function listen() {
     };
   };
   
-  // Focus on input (maybe?)
-  input.click();
+  // Focus on input
+  input.focus();
 };
 
 const sleep = (ms)=>{
