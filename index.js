@@ -11,6 +11,24 @@ function print(html) {
   window.scroll(window.scrollX, document.body.scrollHeight);
 };
 
+function listen() {
+  document.body.innerHTML += "><input id=\"command\">";
+  const input = document.getElementById("command");
+  
+  input.onkeypress = (key)=>{
+    if (key.key === "Enter") {
+      // Turn input into text
+      const value = input.value;
+      input.outerHTML = value + "<br>";
+      // Run input handler
+      window.handleInput(value);
+    };
+  };
+  
+  // Focus on input (maybe?)
+  input.click();
+};
+
 function loadSegment(segmentNumber) {
   const script = document.createElement("script");
   script.src = "./segments/seg" + segmentNumber + ".js";
