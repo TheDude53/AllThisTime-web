@@ -9,6 +9,7 @@
 
 body {
   margin: 2em;
+  white-space: pre-wrap;
 }
 .blur {
   filter: blur(1px);
