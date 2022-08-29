@@ -29,6 +29,12 @@ function listen() {
   input.click();
 };
 
+const sleep = (ms)=>{
+  return new Promise((done)=>{
+    return setTimeout(done, ms);
+  });
+};
+
 function loadSegment(segmentNumber) {
   const script = document.createElement("script");
   script.src = "./segments/seg" + segmentNumber + ".js";
