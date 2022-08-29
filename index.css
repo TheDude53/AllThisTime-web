@@ -4,7 +4,8 @@
   font-family: "Roboto Mono";
   font-size: 16px;
   background-color: black;
-  color: orange;
+  color: #ecdc89;
+  text-shadow: #ff6c00 0 0 15px;
 }
 
 body {
@@ -20,5 +21,4 @@ input#command {
   margin: 0;
   border: 0;
   outline: none;
-  width: 90%;
 }
