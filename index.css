@@ -20,4 +20,5 @@ input#command {
   margin: 0;
   border: 0;
   outline: none;
+  width: 90%;
 }
