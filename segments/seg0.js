@@ -2,6 +2,23 @@
 window.handleInput = async (input)=>{
   if (/^(n(orth)?|s(outh)?|e(ast)?|w(est)?)$/i.test(input)) {
     print("There are people at conveyor belts as far as the eye can see.");
+  } else if (/^take( the)? picture( of the moon)?$/i.test(input)) {
+    print("You can't take the PICTURE OF THE MOON because you already have it.");
+  } else if (/^look( at)?( the)? picture( of the moon)?$/i.test(input)) {
+    print("You look at the PICTURE OF THE MOON. It is a picture of the moon.");
+  } else if (/^examine( the)? picture( of the moon)?$/i.test(input)) {
+    print("You see nothing special about the PICTURE OF THE MOON. It is a picture of the moon.");
+  } else if (/^(rip|eat)( the)? picture( of the moon)?$/i.test(input)) {
+    print("You can't do that right now.");
+  } else if (/^(start|run) conveyor( belt)?$/i.test(input)) {
+    print(".\n\n");
+    await sleep(1000);
+    print("..\n\n");
+    await sleep(1000);
+    print("...\n\n");
+    await sleep(1000);
+    loadSegment(1);
+    return;
   } else {
     print("I don't understand \"" + input + ".\"");
     playData.cluelessness++;
