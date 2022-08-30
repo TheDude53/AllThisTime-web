@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 * {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono";
   font-size: 16px;
   background-color: black;
   color: #ecdc89;
   text-shadow: #ff6c00 0 0 15px;
+  transition: 500ms ease-in-out;
 }
 
 body {
   margin: 2em;
   white-space: pre-wrap;
 }
-.blur {
-  filter: blur(1px);
+body[blue] {
+  filter: hue-rotate(128deg);
 }
 
 input#command {
