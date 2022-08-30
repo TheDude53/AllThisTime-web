@@ -1,6 +1,7 @@
 "use strict";
 window.handleInput = (input)=>{
   if (input === "play") {
+    print("\n");
     loadSegment(0);
     return;
   } else if (input === "music") {
