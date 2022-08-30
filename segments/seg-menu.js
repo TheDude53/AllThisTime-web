@@ -1,13 +1,16 @@
 "use strict";
 window.handleInput = (input)=>{
-  if (input === "play") {
+  if (/^play$/i.test(input)) {
     print("\n");
     loadSegment(0);
     return;
-  } else if (input === "music") {
+  } else if (/^music$/i.test(input)) {
     playData.music = !playData.music;
-    print("Music " + (playData.music ? "on" : "off") + ".\n\n");
+    print("Music " + (playData.music ? "on" : "off") + ".\n");
+  } else if (/^green$/i.test(input)) {
+    document.body.setAttribute("green", true);
   };
+  print("\n");
   listen();
 };
 
@@ -27,9 +30,13 @@ window.handleInput = (input)=>{
   print("Revision 79 / Serial number 58784\n\n\n");
   await sleep(6000);
   
-  print("-- Main Menu --\n");
-  print("Type \"play\" to start the game.\n");
-  print("To toggle music on/off, type \"music\".\n\n");
+  print(" ___________\n");
+  print("| Main Menu |" + "_".repeat(27) + "\n");
+  print("|"  + " ".repeat(39) + "|\n");
+  print("| Type \"play\" to start the game.        |\n");
+  print("| To toggle music on/off, type \"music\". |\n");
+  print("| For a green theme, type \"green\".      |\n");
+  print("|" + "_".repeat(39) + "|\n\n");
   listen();
   
 })();
