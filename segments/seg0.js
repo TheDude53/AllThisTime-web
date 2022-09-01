@@ -10,6 +10,7 @@ window.handleInput = async (input)=>{
     print("You see nothing special about the PICTURE OF THE MOON. It is a picture of the moon.");
   } else if (/^(rip|eat)( the)? picture( of the moon)?$/i.test(input)) {
     print("You can't do that right now.");
+    playData.cluelessness++;
   } else if (/^(start|run) conveyor( belt)?$/i.test(input)) {
     print(".\n\n");
     await sleep(1000);
