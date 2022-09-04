@@ -1,8 +1,8 @@
 "use strict";
 window.handleInput = async (input)=>{
-  if (!playData.tastyPill && /^(eat|take)( the)?( red)? pill$/i.test(input)) {
+  if (!playData.tastyPill && /^(eat|take)(( a)?|( the)?)( red)? pill$/i.test(input)) {
     print("You eat the RED PILL. Now you're energized! Let's process some WIDGETS!");
-    playdata.tastyPill = true;
+    playData.tastyPill = true;
   } else if (!playData.tastyPill) {
     print("Your ROBOT SUPERVISOR's happy smile is turning into visible frustration. \"Come on buddy! It's time to take a RED PILL!\"");
   } else if (/^(n(orth)?|s(outh)?|e(ast)?|w(est)?)$/i.test(input)) {
