@@ -25,8 +25,8 @@ window.handleInput = (input)=>{
   print("\n\n" + "*".repeat(60) + "\n" + "*".repeat(60) + "\n\n\n");
   print("All This Time\n");
   print("A Text Adventure Game\n");
-  print("Copyright (c) 2017 Jonathan Coulton Inc.,");
-  print("Copyright (c) 2022 DudeBot Multimedia Studios and contributors. All rights reserved.\n");
+  print("Copyright (c) 2017 Jonathan Coulton Inc.,\n");
+  print("Copyright (c) 2022-2023 DudeBot Multimedia Studios and contributors. All rights reserved.\n");
   print("Revision 79 / Serial number 58784\n\n\n");
   await sleep(6000);
   
